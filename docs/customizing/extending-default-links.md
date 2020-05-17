@@ -50,3 +50,17 @@ export class AdvancedLinkFactory extends DefaultLinkFactory {
 The actual code for the `AdvancedLinkSegment` [can be found here](https://github.com/projectstorm/react-diagrams/blob/master/packages/diagrams-demo-gallery/demos/demo-custom-link1/index.tsx) (it is in the `demo-custom-link1` folder in the demo gallery).
 
 This is the easiest and most simple way to get started with custom links. 
+
+
+## Exemples of customizations
+Many more customizations can be made. 
+
+### Remove the link
+The default behavior is to add a point to a link. The selection is done by `Shift + Click`.
+
+If you don't need to add a point a workaround can be to set `maxNumberPointsPerLink` to zero after creating `engine`
+
+`const engine = createEngine()
+engine.maxNumberPointsPerLink = 0`
+
+This workaround is discussed [here](https://github.com/projectstorm/react-diagrams/issues/49).
